@@ -1,0 +1,111 @@
+:root{
+    --red : #fc401f;
+    --black : #111214;
+    --gray-text : #767678;
+    --gray : #e5e5e7;
+    --white : #ffffff;
+    --box-shadow : 0px 10px 20px rgb(0 0 0 / 7%);
+    --container-shadow: 0 2px 4px rgba(243, 243, 243, 0.2)
+}
+
+  .header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 3rem;
+    background: var(--white);
+    box-shadow: var(--box-shadow);
+    z-index: 1000;
+  }
+  .header .logo{
+    width: 150px;
+    height: 60px;
+    cursor: pointer;
+  }
+  .header .menu .menuList{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  .header .menu .menuList a:hover{
+    color: var(--red);
+  }
+
+  .closeNavbar,
+  .toogleNavbar{
+    display: none;
+  }
+
+
+
+@media screen and (max-width: 1024px){
+    .header .button{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .header{
+        padding: 1rem 1.5rem;
+    }
+    .menu{
+        position: absolute;
+        background: var(--red);
+        height: max-content;
+        width: 80%;
+        padding: 1rem;
+        border-radius: 10px;
+        top: -700%;
+        left: 50%;
+        transform: translate(-50%);
+        box-shadow: var(--container-shadow);
+        transition: .3s ease;
+        z-index: 2000;
+    }
+    .menu .menuList{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        padding: 1rem 0;
+    }
+    .menu .menuList .menuItems{
+        padding: 1rem 0;
+    }
+    .menu .menuList .menuItems .menuLink{
+        color: var(--white);
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    .menu .menuList .menuItems .menuLink:hover{
+        color: var(--black);
+    }
+    .menu .closeNavbar{
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        color: var(--white);
+    }
+    .menu .closeNavbar .icon{
+        font-size: 1.7rem;
+    }
+    .menu .closeNavbar:hover{
+        color: var(--black);
+    }
+    .activeNavbar{
+        top: 9rem;
+    }
+    .toogleNavbar{
+        display: block;
+        font-size: 1.8rem;
+        color: var(--red);
+    }
+    .toogleNavbar:hover{
+        color: var(--black);
+    }
+}

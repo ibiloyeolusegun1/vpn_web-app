@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Popins', sans-serif;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  border: none;
+  outline: none;
+  list-style: none;
+  transition: .3s ease-in-out;
+}
+:root{
+  --red : #fc401f;
+  --dark-red : #8f1a05;
+  --black : #111214;
+  --gray-text : #767678;
+  --gray : #e5e5e7;
+  --white : #ffffff;
+  --box-shadow : 0px 19px 60px rgb(0 0 0 / 8%);
+  --container-shadow: 0 20px 40px rgba(243, 243, 243, 0.932)
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  scroll-behavior: smooth;
+}
+body{
+  background: var(--white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App{
+  /* padding: 0.5rem 3.5rem; */
+  overflow: hidden;
+  color: var(--black);    
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.grid{
+  display: grid;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 1rem;
+}
+/* .container{
+  max-width: 85%;
+  margin: auto;
+} */
+.flex{
+  display: flex;
+  align-items: center;
+  /* justify-content: space-between; */
 }
 
-.App-link {
-  color: #61dafb;
+a{
+  color: var(--gray-text);
+}
+.icon{
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+.btn{
+    padding: 10px 25px;
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: .9rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+.btn-red{
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+.btn-red:hover{
+    color: var(--white);
+    background-color: var(--red);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+  
+
+  
