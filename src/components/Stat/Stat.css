@@ -1,0 +1,102 @@
+:root{
+    --red : #fc401f;
+    --light-red : #f86045;
+    --dark-red : #8f1a05;
+    --black : #111214;
+    --gray-text : #767678;
+    --gray : #e5e5e7;
+    --white : #ffffff;
+    --box-shadow : 0px 19px 60px rgb(0 0 0 / 8%);
+    --container-shadow: 0 20px 40px rgba(243, 243, 243, 0.932)
+}
+
+
+.stat-container{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+.stat-container .cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #fff;
+    border-radius: 20px;
+    justify-content: center;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+}
+.stat-container .cards .stat-card{
+    grid-column: span 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    margin: 40px 0px;
+}
+.stat-container .cards .stat-card:nth-child(2){
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    padding: 30px 30px;
+}
+.stat-container .cards .stat-card .icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f33b1a30;
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    font-size: 2rem;
+    border-radius: 50%;
+    padding: 20px;
+    color: var(--red);
+}
+.stat-container .cards .stat-card .stat-detail{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.stat-container .cards .stat-card .stat-detail span:first-child{
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.stat-container .cards .stat-card .stat-detail span:last-child{
+    color: var(--gray-text);
+    font-size: 1rem;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .stat-container .cards{
+        gap: 1rem;
+    }
+    .stat-container .cards .stat-card{
+       grid-column: span 3;
+       height: 200px;
+       gap: 2rem;
+    }
+    .stat-container .cards .stat-card .icon{
+        height: 80px;
+        width: 80px;
+        line-height: 80px;
+        font-size: 2rem;
+        padding: 20px;
+    }
+    .stat-container .cards .stat-card .stat-detail span:first-child{
+        font-size: 2.5rem;
+        margin-bottom: 8px;
+    }
+    .stat-container .cards .stat-card .stat-detail span:last-child{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .stat-container{
+        padding: 0 1rem;
+    }
+}
