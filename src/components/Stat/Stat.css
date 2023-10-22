@@ -56,6 +56,7 @@
 .stat-container .cards .stat-card .stat-detail{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
 }
 .stat-container .cards .stat-card .stat-detail span:first-child{
