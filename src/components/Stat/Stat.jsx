@@ -1,6 +1,7 @@
 import React from 'react'
 import './Stat.css'
 import { FaUser, FaMapMarkerAlt, FaServer } from 'react-icons/fa'
+import CountUp from 'react-countup'
 
 const Stat = () => {
   return (
@@ -12,7 +13,10 @@ const Stat = () => {
                         <FaUser/>
                     </div>
                     <div className="stat-detail">
-                        <span>90+</span>
+                        <span>
+                            <CountUp start={560} end={1600} duration={4}/>
+                            <span>+</span>
+                        </span>
                         <span>User</span>
                     </div>
                 </div>
@@ -21,7 +25,10 @@ const Stat = () => {
                         <FaMapMarkerAlt/>
                     </div>
                     <div className="stat-detail">
-                        <span>30+</span>
+                        <span>
+                            <CountUp start={20} end={160} duration={4}/>
+                            <span>+</span>
+                        </span>
                         <span>Locations</span>
                     </div>
                 </div>
@@ -30,7 +37,10 @@ const Stat = () => {
                         <FaServer/>
                     </div>
                     <div className="stat-detail">
-                        <span>50+</span>
+                        <span>
+                            <CountUp start={10} end={60} duration={4}/>
+                            <span>+</span>
+                        </span>
                         <span>Servers</span>
                     </div>
                 </div>
