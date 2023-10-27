@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Popins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+    list-style: none;
+    transition: .3s ease-in-out;
+}
+:root{
+    --red : #fc401f;
+    --dark-red : #8f1a05;
+    --black : #111214;
+    --gray-text : #767678;
+    --gray : #e5e5e7;
+    --white : #ffffff;
+    --box-shadow : 0px 19px 60px rgb(0 0 0 / 8%);
+    --container-shadow: 0 20px 40px rgba(243, 243, 243, 0.932)
+}
+
+.pricing-container{
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6rem;
+    padding: 0 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.pricing-container h1{
+    font-size: 3rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    text-align: center;
+}
+.pricing-container p{
+    width: 520px;
+    font-size: 1rem;
+    color: var(--gray-text);
+    margin: 1rem 0 3rem 0;
+    line-height: 2;
+    text-align: center;
+}
+.pricing-container .pricing-cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.pricing-container .pricing-cards .card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid var(--gray);
+    grid-column: span 3;
+    padding: 80px 70px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.pricing-container .pricing-cards .card:hover{
+    border: 1px solid var(--red);
+}
+.pricing-container .pricing-cards .card .image{
+    width: 12rem;
+    height: 12rem;
+}
+.pricing-container .pricing-cards .card h3{
+    margin-top: 1.5rem;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .pricing-container .pricing-cards{
+        gap: 1rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .pricing-container .pricing-cards .card{
+        grid-column: span 9;
+    }
+}
+@media screen and (max-width: 600px){
+    .pricing-container{
+        padding: 0 1rem;
+    }
+}
