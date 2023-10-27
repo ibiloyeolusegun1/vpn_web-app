@@ -1,0 +1,131 @@
+:root{
+    --red : #fc401f;
+    --light-red : #f86045;
+    --dark-red : #8f1a05;
+    --black : #111214;
+    --gray-text : #767678;
+    --gray : #e5e5e7;
+    --white : #ffffff;
+    --box-shadow : 0px 19px 60px rgb(0 0 0 / 8%);
+    --container-shadow: 0 20px 40px rgba(243, 243, 243, 0.932)
+}
+
+.container{
+    height: 100vh;
+    max-width: 1300px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+.container .left{
+    width: 50%;
+}
+.container .left h1{
+    font-size: 3.5rem;
+    font-weight: 500;
+}
+.container .left h1 span{
+    font-weight: 600;
+}
+.container .left p{
+    font-size: 1rem;
+    color: var(--gray-text);
+    margin: 2rem 0;
+    line-height: 2;
+}
+.container .left .btn{
+    color: var(--white);
+    padding: 1rem 3.8rem;
+    border-radius: 10px;
+    background-color: var(--red);
+    font-size: .9rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: .8rem;
+}
+.container .left .btn:hover{
+    background-color: var(--light-red);
+}
+.container .right{
+    width: 50%;
+}
+.container .right .image{
+    height: auto;
+    width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+    .container{
+        gap: 2rem;
+    }
+    .container .left h1{
+        font-size: 2.6rem;
+    }
+    .container .left p{
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap-reverse;
+        margin-top: 6rem;
+    }
+    .container .left,
+    .container .right{
+        width: 100%;
+    }
+    .container .left h1{
+        font-size: 2.2rem;
+    }
+    .container .left{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px) {
+    .container .left{
+        margin-top: -17rem;
+    }
+    .container .right{
+        margin-top: -7rem;
+    }
+    .container .left h1{
+        font-size: 2rem;
+    }
+    .container{
+        padding: 0 1rem;
+    }
+}
+@media screen and (max-width: 400px) {
+    .container .left{
+        margin-top: -17rem;
+    }
+    .container .right{
+        margin-top: -7rem;
+    }
+    .container .left h1{
+        font-size: 1.7rem;
+    }
+    .container .left p{
+        margin: 1.5rem 0;
+    }
+}
+@media screen and (max-width: 350px) {
+    .container .left{
+        margin-top: -2rem;
+    }
+    .container .right{
+        margin-top: 0rem;
+    }
+}
