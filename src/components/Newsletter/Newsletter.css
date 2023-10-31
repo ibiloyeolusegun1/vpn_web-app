@@ -62,7 +62,7 @@
     font-size: .9rem;
     font-weight: bold;
     cursor: pointer;
-    margin-top: .8rem;
+    margin-top: .81rem;
 }
 .newsletter-container .right .btn:hover{
     background-color: var(--light-red);
