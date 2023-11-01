@@ -8,6 +8,7 @@ import Pricing from './components/Pricing/Pricing';
 import Map from './components/Map/Map';
 import Newsletter from './components/Newsletter/Newsletter';
 import Customer from './components/Customer/Customer';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
        <Map/>
        <Customer/>
        <Newsletter/>
+       <Footer/>
     </div>
   );
 }
