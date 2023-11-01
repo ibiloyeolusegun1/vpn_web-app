@@ -87,9 +87,15 @@
     .pricing-container .pricing-cards .card{
         grid-column: span 9;
     }
+    .pricing-container h1{
+        font-size: 2.5rem;
+    }
 }
 @media screen and (max-width: 600px){
     .pricing-container{
         padding: 0 1rem;
+    }
+    .pricing-container p{
+        width: 100%;
     }
 }
